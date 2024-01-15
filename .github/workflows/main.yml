@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: foo
-        uses: tcapelle/simple-translate-action@v1
+        uses: tcapelle/simple-translate-action@v2
         with:
             folder-to-translate: 'docs/'
             language: "es"
