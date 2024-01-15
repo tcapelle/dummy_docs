@@ -16,3 +16,9 @@ jobs:
             output-folder: "docs-es/"
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: Translated Docs
+          title: Automatic translation
+          body: This PR was automatically created by the translate-action
+          branch: translated-docs-auto
+          base: main
