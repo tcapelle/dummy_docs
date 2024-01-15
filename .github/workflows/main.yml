@@ -14,3 +14,5 @@ jobs:
             folder-to-translate: 'docs/'
             language: "es"
             output-folder: "docs-es/"
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
