@@ -1,13 +1,15 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  translate:
     runs-on: ubuntu-latest
     name: Translate stuff
     steps:
       - uses: actions/checkout@v4
-      - id: foo
+      - name: translate-action
         uses: tcapelle/simple-translate-action@v2
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
             folder-to-translate: 'docs/'
             language: "es"
