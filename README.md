@@ -13,7 +13,7 @@ You could modify the workflow so it triggers on prs or when specific tags are pu
 The main step is performing the translation, this is configured in the workflow file:
 
 ```yaml
-uses: tcapelle/gpt_translate@v0.9.0
+uses: tcapelle/gpt_translate@v1.0
 env:
     OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}  # you need to provide an OPENAI_API_KEY in your secrets
 with:
