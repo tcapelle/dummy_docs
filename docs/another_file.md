@@ -25,6 +25,7 @@ If this is your first time using W&B we suggest you explore the following:
 
 ## How does W&B work?
 
+
 We recommend you read the following sections in this order if you are a first-time user of W&B:
 
 1. Learn about [Runs](./runs/intro.md), W&B's basic unit of computation.
