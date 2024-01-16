@@ -8,12 +8,12 @@ jobs:
   translate:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    name: Translate stuff
+    name: Translating docs
     steps:
       - uses: actions/checkout@v4
       - name: translate-action
         id: translate-action
-        uses: tcapelle/gpt_translate@v0.9.0
+        uses: tcapelle/gpt_translate@v1.0
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
@@ -21,6 +21,9 @@ jobs:
             language: "es"
             output-folder: "docs-es/"
             filter-files: "pr"  # only consider files that were modified in the PR
+            max-chunk-tokens: "1000"  # max number of tokens to translate at once
+            config-folder: "./configs"  # where are you translation configs stored
+
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
