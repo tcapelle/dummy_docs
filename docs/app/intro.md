@@ -7,6 +7,7 @@ displayed_sidebar: default
 
 This section contains  reference docs for the web app interface, hosted in the cloud at wandb.ai or [hosting with W&B Local](../hosting/intro.md).
 
+
 ### Pages
 
 * [**Project page**](pages/project-page.md): Compare multiple experiments in a unified place
