@@ -21,6 +21,8 @@ with:
     language: "es" # the language to translate
     output-folder: "docs-es/" # the output folder where the translated files will be stored
     filter-files: "pr"  # only consider files that were modified in the PR (or "all" to translate all files)
+    max-chunk-tokens: "1000"  # max number of tokens to translate at once
+    config-folder: "./configs"  # where are you translation configs stored
 ```
 
 You also need to setup a [configs](/configs/) folder in your repo to setup the specifics on how the translation is performed. Inside this folder you have the following structure:
