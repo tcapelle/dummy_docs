@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: translate-action
-        uses: tcapelle/simple-translate-action@v2
+        uses: tcapelle/gpt_translate@latest
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
