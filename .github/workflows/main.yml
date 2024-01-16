@@ -28,9 +28,9 @@ jobs:
           commit-message: Translated Docs
           title: Automatic translation
           body: |
-            This PR was automatically created by the translate-action when merging [PR](#${{ github.event.pull_request.number }})
+            This PR was automatically created by the translate-action when merging [PR](${{ github.event.pull_request.number }})
             Please review the changes and merge if they are correct.
-          branch: translate-${{ github.event.pull_request.head.sha }}
+          branch: translate-pr-${{ github.event.pull_request.number }}
           base: main
           delete-branch: true
-          labels: translated
+          labels: translation
