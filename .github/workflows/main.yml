@@ -7,13 +7,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: translate-action
-        uses: tcapelle/gpt_translate@v0.7
+        uses: tcapelle/gpt_translate@v0.8.1
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
             folder-to-translate: 'docs/'
             language: "es"
             output-folder: "docs-es/"
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
