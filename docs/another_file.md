@@ -23,7 +23,6 @@ If this is your first time using W&B we suggest you explore the following:
 1. Explore our [Integrations guide](./integrations/intro.md) and our [W&B Easy Integration YouTube](https://www.youtube.com/playlist?list=PLD80i8An1OEGDADxOBaH71ZwieZ9nmPGC) playlist for information on how to integrate W&B with your preferred machine learning framework.
 1. View the [API Reference guide](../ref/README.md) for technical specifications about the W&B Python Library, CLI, and Weave operations.
 
-
 ## How does W&B work?
 
 We recommend you read the following sections in this order if you are a first-time user of W&B:
