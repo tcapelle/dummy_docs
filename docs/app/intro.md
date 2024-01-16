@@ -15,6 +15,7 @@ This section contains  reference docs for the web app interface, hosted in the c
 
 ### Feature**s**
 
+
 * [**Panels**](features/panels/intro.md): Default visualizations available in workspaces and reports
   * [**Line Plot**](features/panels/line-plot/intro.md)
   * [**Run Colors**](features/panels/run-colors.md)
