@@ -28,11 +28,8 @@ jobs:
           commit-message: Translated Docs
           title: Automatic translation
           body: |
-            This PR was automatically created by the translate-action. 
-            
-            The following files where changed: 
-              $${{ steps.translate-action.outputs.translated-files }}
-              Please review the changes and merge if they are correct.
+            This PR was automatically created by the translate-action when merging [PR](#${{ github.event.pull_request.number }})
+            Please review the changes and merge if they are correct.
           branch: translate-${{ github.event.pull_request.head.sha }}
           base: main
           delete-branch: true
