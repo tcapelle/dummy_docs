@@ -1,9 +1,12 @@
 on: 
   pull_request:
     types: [closed]
+    paths:
+      - '**.md'
 
 jobs:
   translate:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     name: Translate stuff
     steps:
