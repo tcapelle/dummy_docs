@@ -11,6 +11,8 @@ jobs:
     name: Translating docs
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - name: translate-action
         id: translate-action
         uses: tcapelle/gpt_translate@v1.0
