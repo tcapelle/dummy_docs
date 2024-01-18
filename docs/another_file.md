@@ -17,6 +17,7 @@ Set up W&B in 5 minutes, then quickly iterate on your machine learning pipeline 
 
 If this is your first time using W&B we suggest you explore the following:
 
+
 1. Experience W&B in action, [run an example introduction project with Google Colab](http://wandb.me/intro).
 1. Read through the [Quickstart](../quickstart.md) for a quick overview of how and where to add W&B to your code.
 1. Read [How does W&B work?](#how-does-weights--biases-work) This section provides an overview of the building blocks of W&B.
