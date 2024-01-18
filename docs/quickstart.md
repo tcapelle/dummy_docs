@@ -83,49 +83,4 @@ wandb.login()
 Provide [your API key](https://wandb.ai/authorize) when prompted.
   </TabItem>
 </Tabs>
-
-
-## 3. Start a  run and track hyperparameters
-
-Initialize a W&B Run object in your Python script or notebook with [`wandb.init()`](./ref/python/run.md) and pass a dictionary to the `config` parameter with key-value pairs of hyperparameter names and values:
-
-```python
-run = wandb.init(
-    # Set the project where this run will be logged
-    project="my-awesome-project",
-    # Track hyperparameters and run metadata
-    config={
-        "learning_rate": 0.01,
-        "epochs": 10,
-    })
-```
-
-
-<!-- ```python
-run = wandb.init(project="my-awesome-project")
-``` -->
-
-A [run](./guides/runs) is the basic building block of W&B. You will use them often to [track metrics](./guides/track), [create logs](./guides/artifacts), [create jobs](./guides/launch), and more.
-
-
-<!-- ## Track metrics -->
-<!-- Pass a dictionary to the `config` parameter with key-value pairs of hyperparameter name and values when you initialize a run object:
-
-```python
-  # Track hyperparameters and run metadata
-  config={
-      "learning_rate": lr,
-      "epochs": epochs,
-  }
-``` -->
-
-
-<!-- Use [`wandb.log()`](./ref/python/log.md) to track metrics:
-
-```python
-wandb.log({'accuracy': acc, 'loss': loss})
-```
-
-Anything you log with `wandb.log` is stored in the run object that was most recently initialized. -->
-
 The image above (click to expand) shows the loss and accuracy that was tracked from each time we ran the script above.  Each run object that was created is show within the **Runs** column. Each run name is randomly generated.
