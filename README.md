@@ -1,6 +1,6 @@
 # Automatic Translation using GPT
 
-This repo implements automatic translation of a folder containing markdown files using GPT-3/4. This is done by using the github action (and python lib) [gpt-translate](github.com/tcapelle/gpt_translate) and the defined [workflow file](/.github/workflows/main.yml) in this repo.
+This repo implements automatic translation of a folder containing markdown files using GPT-3/4. This is done by using the github action (and python lib) [gpt-translate](https://github.com/tcapelle/gpt_translate) and the defined [workflow file](/.github/workflows/main.yml) in this repo.
 
 ## Try it yourself
 
