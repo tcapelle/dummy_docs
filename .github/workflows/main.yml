@@ -3,11 +3,11 @@ on:
     types: [closed]
     paths:
       - '**.md'
-  workflow_dispatch:
+  git workflow_dispatch:
 
 jobs:
   translate:
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     name: Translating docs
     steps:
