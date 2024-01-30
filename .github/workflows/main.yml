@@ -7,7 +7,6 @@ on:
 
 jobs:
   translate:
-    if: github.event.pull_request.merged == true || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     name: Translating docs
     steps:
@@ -16,14 +15,13 @@ jobs:
           fetch-depth: 2
       - name: translate-action
         id: translate-action
-        uses: tcapelle/gpt_translate@v1.1
+        uses: tcapelle/gpt_translate@v1.2
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
             folder-to-translate: 'docs/'
             language: "es"
             output-folder: "docs-es/"
-            filter-files: "pr"  # only consider files that were modified in the PR
             max-chunk-tokens: "1000"  # max number of tokens to translate at once
             config-folder: "./configs"  # where are you translation configs stored
 
