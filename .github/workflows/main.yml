@@ -3,7 +3,7 @@ on:
     types: [closed]
     paths:
       - '**.md'
-  git workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   translate:
