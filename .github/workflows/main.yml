@@ -5,6 +5,16 @@ on:
       - '**.md'
       - '**.mdx'
   workflow_dispatch:
+    inputs:
+      input_file:
+        description: 'Path to the .txt file to translate'
+        required: false
+        type: string
+        default: ""
+
+defaults:
+  run:
+    shell: bash  # default shell is sh
 
 jobs:
   translate:
@@ -26,7 +36,7 @@ jobs:
             language: "es"
             output-folder: "docs-es/"
             config-folder: "./configs"  # where are you translation configs stored
-
+            input-file: ${{ inputs.input_file }}
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
