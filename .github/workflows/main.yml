@@ -52,3 +52,6 @@ jobs:
           base: main
           delete-branch: true
           labels: translation
+          add-paths: |
+            "docs-es/*.md"
+            "docs-es/*.mdx"
