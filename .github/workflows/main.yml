@@ -1,3 +1,5 @@
+name: Translate docs
+
 on: 
   pull_request:
     types: [closed]
