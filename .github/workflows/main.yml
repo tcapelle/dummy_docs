@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 2
       - name: translate-action
         id: translate-action
-        uses: tcapelle/gpt_translate@main
+        uses: tcapelle/gpt_translate@action
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
