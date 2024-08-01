@@ -16,13 +16,12 @@ The main step is performing the translation, this is configured in the workflow 
 uses: tcapelle/gpt_translate@v1.0
 env:
     OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}  # you need to provide an OPENAI_API_KEY in your secrets
+    WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }} # you need to provide a secret containing output of https://wandb.ai/authorize
 with:
     folder-to-translate: 'docs/' # the folder where the markdown files are located
     language: "es" # the language to translate
     output-folder: "docs-es/" # the output folder where the translated files will be stored
-    filter-files: "pr"  # only consider files that were modified in the PR (or "all" to translate all files)
-    max-chunk-tokens: "1000"  # max number of tokens to translate at once
-    config-folder: "./configs"  # where are you translation configs stored
+    input-file: ${{ inputs.input_file }} # list of modified .md/.mdx files to translate
 ```
 
 You also need to setup a [configs](/configs/) folder in your repo to setup the specifics on how the translation is performed. Inside this folder you have the following structure:
